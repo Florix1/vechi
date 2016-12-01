@@ -1,0 +1,31 @@
+//	Hategan Florin George 321CB, Tema1 PC
+
+
+		Nu am mai considerat necesar un header(scuze) dar functiile
+	implementate nu au o dificultate prea mare, realizand exact ce scrie in
+	enunt sunt atat de multe linii din cauza formatului de output.(si poate 
+	am exagerat putin cu spatiile goale ca sa arata mai ok)
+
+	Implementare 
+	
+		Citim de tastatura numarul de seturi de date ca int apoi citim
+	ipurile / ipuri + mastii sub forma de stringuri.Cu ajutorul '/' spargem
+	totul in 2 stringuri (daca are masca, iar in acest caz o salvam) iar
+	valorile de pe fiecare octet din ip le salvam intru-un vector de uint8_t
+	care ne asigura ca valoarea este stocata pe un byte.(avem nevoie la 
+	operatii pe biti)
+		Task01 -citirea
+		Task23 - si pe biti /sau pe biti ca in enunt
+		Task4 - face si pe biti intre fiecare ip cu o masca si apoi 
+	compara
+		Task5 - printf face minuni
+		Task6 - citeste cate un ip si le verifica folosind functia de la
+	task4
+		Task7 - pornind de la 128 shifteaza la dreapta si verifica
+	fiecare bit si scrie 0/1 (cred ca putea fi scris si mai elegant)
+		Task8 - verifica catul si restul impartirii la 32 daca depaseste
+	9 aduna la codul ascii al lui 'A' diferenta lor si scade 1 
+	
+/*		As aprecia un feedback(bun/rau) chiar daca nu e o tema complexa 
+	de cele mai multe ori ne incurcam la chestiile cele mai simple
+*/

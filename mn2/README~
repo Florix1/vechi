@@ -1,0 +1,26 @@
+// Hategan Florin George 311 CB, MN Tema 2 //
+
+	Citirea ( nu e o functie insa se gaseste in toti algoritmii / am citit pe rand cerintele altfel as fi facut functie separat ) 
+	-folosesc textread %f ca sa extrag fiecare numar intr-un vector coloana
+	-prelucrez in functie de indici pentru a obtine matricea de adiacenta 
+	%explicat in cod
+	-matricea K e direct inversata fiind 1/ suma liniilor din matricea de adiacenta
+	-se obtine M 
+  Functia Iterative :
+  	-se porneste de la R= vector coloana de 1/N
+  	-se aplica formula cat timp norma diferetei e mai mare decat eps
+  Functia Algebraic:
+  	- am luat Gram Schmidt vectorizat din laborator
+  	- din A=QR si AA^-1=I rezulta RA^-1=Q'
+  	- am aplicat SST ul obisnuit(doar pentru vector coloana) de-a lungul celor N coloane pentru a ajunge la A^-1 
+  	-se aplica algoritmul din enunt
+  	Functia Power 
+  	-identica cu Iterative doar ca se schimba iteratia precum in enunt
+  	Functia PageRank
+  	-apeleaza toate functiile de mai sus
+  	-apartententa e formata din 2 ifuri ca sa respecte ramurile
+  	-apeleaza apartenenta pentru un fiecare vector din R2
+  	-sorteaza inainte si dupa apartenenta vecotrul indicilor si cel al valorilor
+  	//sortarea nu merge pentru graf1 (6 si 7 sunt invers)
+  	// am incercat sa sortez doar la inceput/doar la sfarsit / cu si fara = dar nu am reusit sa aduc la forma dorita
+  	-in cele din urma scriere in fisier; 

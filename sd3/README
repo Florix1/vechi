@@ -1,0 +1,77 @@
+// HATEGAN Florin George - 311 CB //
+
+Implementare functii :
+	
+		Am folosit o coada pentru parcurgerea in adancime (cum ne-a fost
+	indicat la curs.Arborele a fost creat prin elemente de tip lista 
+	inlantuite in partea dreapta(frate) si jos(fiu).Pentru legarea in coada
+	am adaugat si inlantuirea (ant);
+	
+	Elementul general contine : 
+		- char sign = codificare nodului respectiv
+		- char litera = litera coresp drumului parcurs
+		- *urm = memoreaza fratii unui nod asemanator
+		- *jos = memoreaza primul fiu al unui nod (primul introdus)
+		- *ant = leagrea folosita doar in coada a elementelor
+
+	#coada.c :
+			*InitQ - initializeaza structura cozii 
+			*Extrage - scoate elementul de la inceputul cozii
+			*IntrQ - introduce elementul la sfarsitul cozii
+			//legarea in coada se face prin *ant;
+			
+			
+			
+	#decodificare:
+			*Initializare - creeaza primul element(gol) al arborelui
+	si il intoarce prin efect lateral
+	
+			*Show - adaugam capatul arborelui in coada alaturi de
+	un element de delimitare (care ne indica cand sa trecem pe randul 
+	urmator cu codificare ' ' si ' ' (spatiu nu era element viabil in 
+	codificarea normala a unui element)) 
+				**dupa se extrag pe rand elemente din coada
+	si se afiseaza in fisier, introducandu-se apoi fii acestora. Daca se
+	gaseste elementul de delimitare se trece la rand nou in fisier si se
+	reintroduce daca coada nu este vida(se evita loop infit)
+	
+	
+			*Delete - functie apelata recursiv care tine minte un 
+	element si elementul anterior (pentru modificarea legaturilor). Se cauta
+	elementul si apoi se sterge corespunzator celula daca nu are fiu respectiv
+	informatia daca are fiu.
+				** in a doua parte la intoarcere se sterg toate
+	nodurile care nu au devenit frunze
+	
+	
+			*add - functia parcurge fiecare char din string si 
+	creeaza nod unde este nevoie si la ultimul adauga si litera corespunzatoare
+	
+	
+			*Search - intoarce 0/-1 daca exista elementul cu 
+	respectiva codificare/nu are codificarea respectiva parcurgand toti 
+	fratii unui nod pana la gasirea codificarii cautate si apoi coborand
+	pana la epuizarea caracterelor din codificare
+	
+	
+			*Decode - aproape identic doar ca intoarce litera 
+	corespunzatoare
+			
+			
+	#main.c
+			*Se face citirea datelor de intrare intoducandu-se in
+	arbore cu ajutorul functiilor.Se realizeaza operatiile citite din fisier
+	Se citeste caracter cu caracter codificare textului si se adauga intr-un
+	string care este mereu reinitializat cu 0.Functia decode intoarce litera
+	corespunzatoare apoi se scrie in fisier.
+	
+	//Obtin 85/85 imi pare rau ca nu am apucat sa termin mai devreme sa 
+	//implemntez cu bonus 
+	//Makefileul meu cu initial da erori asa ca am compliat simplist
+
+
+
+
+
+
+

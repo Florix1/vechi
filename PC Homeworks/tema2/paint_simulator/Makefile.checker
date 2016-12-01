@@ -1,0 +1,11 @@
+CFLAGS := -Wall -Wextra -Werror -pedantic -std=c99
+
+EXEC := raw_to_ppm
+
+build: $(EXEC)
+
+$(EXEC): $(EXEC).c
+	$(CC) $(CFLAGS) $< -o $@
+
+clean:
+	rm -f $(EXEC)

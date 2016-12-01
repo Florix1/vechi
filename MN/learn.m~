@@ -1,0 +1,20 @@
+function [w]= learn(X,t)
+
+[m n]=size(X);
+y=ones(m,1);
+
+X=[X y];
+
+Y=X'*X;
+Z=crout("Y");
+w=Z*X'*t;
+
+
+
+
+
+
+
+
+
+

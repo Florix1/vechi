@@ -1,0 +1,43 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdarg.h>
+
+typedef struct celula 
+{
+	void* info;
+	struct celula *urm,*ant;
+
+} TCelula, *TLC, **ALC;
+
+typedef int (*FHash)(char*);
+
+typedef struct 
+{
+	size_t M;
+	FHash fh;
+	TLC *v;
+} TH;
+
+typedef struct
+{
+	char* key;
+	char* value;
+	int frecv;
+
+} TElement, *TE;	
+
+typedef int (*TFCmp)(void*, void*);
+typedef void (*TF) (void*);
+typedef int (*FHash)(char*);
+
+void remove(char* key,TH* a,int* nr);
+
+int set(char* key,char* val,TH* a,int* nr);
+
+char* get(char* key,TH* a);
+
+
+
+
+

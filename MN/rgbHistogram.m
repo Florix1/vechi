@@ -1,0 +1,15 @@
+function [ H ] = rgbHistogram(cale,nr);
+I=imread(cale);
+R=I(:,:,1); R=single(R);
+G=I(:,:,2); G=single(G);
+B=I(:,:,3); B=single(B);
+[m n]=size(R);
+H=zeros(1,3*nr);
+aux=256/nr;
+	%cautam pentru fiecare interval elementele si insumam numarul de indici obinuti pe pozitia respectiva
+for i=0:nr-1
+	H(1,i+1)=length(find((R>=i*aux) & (R<aux*(i+1)))); 
+	H(1,nr+i+1)=length(find((G>=i*aux) & (G<aux*(i+1))));
+	H(1,2*nr+i+1)=length(find((B>=i*aux) & (B<aux*(i+1))));
+	end
+endfunction

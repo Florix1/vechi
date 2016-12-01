@@ -1,0 +1,52 @@
+//	Hategan Florin George - 321 CB, Analiza algoritmilor 
+
+Task 1 
+
+		Implementat cu un "tablou" pe baza de liste : 
+	
+	-orizontal se afla celule care contin numele starilor.
+	
+	-vertical in prelungirea starilor se afla tranzitiile (celule care 
+	au pointerul right spre starea urmatoare urmand a se cauta pe verticala
+	tranzitia corespunzatoare).
+	
+	Ele tin minte 
+	       	*caracterul ce trebuie scris-letW 
+		*letR e folosit pentru a identifica tranzitia in funcite de ce
+	primeste pe banda 
+		*move stabileste mutarea cursorului pe banda
+		*right duce pointerul la starea urmatoare
+		*down duce la o alta tranzitie pentru aceeasi stare 
+
+	
+	-starile finale au setate un caracter cu 'S'(top) pentru a le diferentia
+	
+		
+Task 2
+
+	*Scuze pentru fisier e putin confuz fiindca uitasem de o stare si nu am
+	mai modificat toate numele de stari (S14)
+	
+	Principiul:
+	
+		Am realizat totul pentru a suprapune numarul din stanga ( nu am
+	vrut probleme cu banda "infinita" ).
+		Suprascriu 0/1 cu o litera F/T si verific "prima" cifra de la 
+	urmatorul numar(in loc de diez scriu un caracter iar in loc de 
+	"prima" cifra scriu diez) - verific mereu ce e dupa #
+		Ma intorc si suprascriu primul caracter cu F/T sau C(arry) 
+	pentru cazul 1 si 1.
+		La final avand cursorul in dreapta de tot suprascriu caracterele
+	cu # si las pe banda doar T/F/C si ajung in stanga de tot.De aici incep
+	sa inlocuiesc la loc T/F cu 0/1 si Carry mai adauga 1 la urmatoarea 
+	transformare.
+		*Daca primul sir e mai mare verific daca dupa # e tot # si ma 
+	intorc fara sa fac modificari.
+		**Daca al doilea e mai mare analog scire caracter in loc de #, 
+	modifica 0/1 in # si suprascrie de data asta primul caracter din dreapta
+	literelor.
+		
+	S0-S4 scriu T/F/C fara cazul **
+	S7-S9 suprascriu T/F/C 
+	S5,S6,S10-S14 se ocupa de ** si stergerea caracterelor
+	
